@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'photos#index'
+  resources :photo
+  # This will invoke the welcome controller, and activate the index action.
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
