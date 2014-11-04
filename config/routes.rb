@@ -1,20 +1,7 @@
 Rails.application.routes.draw do
-  get 'photos/index'
-
-  get 'photos/create'
-
-  get 'photos/new'
-
-  get 'photos/edit'
-
-  get 'photos/update'
-
-  get 'photos/delete'
-
-  get 'photos/show'
 
   root 'photos#index'
-  resources :photo
+  resources :photos
 
   # This will invoke the welcome controller, and activate the index action.
 

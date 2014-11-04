@@ -1,2 +1,7 @@
-<h1>Photos#show</h1>
-<p>Find me in app/views/photos/show.html.erb</p>
+<h1>Show Photo</h1>
+<%= image_tag(@photo.url) %>
+<%= @photo.title %>
+<%= @photo.author %>
+<%= link_to 'Edit', edit_polymorphic_path(@photo) %>
+<%= link_to 'Delete', @photo, method: :delete %>
+<%= link_to 'All Photos', photos_path %>

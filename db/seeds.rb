@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Photo.create(title: 'Bob', author: 'Newhart', url: 'http://i.imgur.com/dRxnay8.jpg')
+Photo.create(title: 'Else', author: 'Someone', url: 'http://i.imgur.com/VqIiZ25.jpg')
