@@ -4,6 +4,7 @@
   <title>Photogur</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'bootstrap' %>
+  <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,7 +12,7 @@
 <div class="container">
   <div class="row">
     <header>
-      <h1>Photogur</h1>
+      <h1>Photogur<small><%= yield :head %></small></h1>
       <% flash.each do |name, msg| -%>
           <%= content_tag :div, msg, class: class_for_item(name) %>
       <% end -%>
@@ -20,14 +21,12 @@
   <div class="row">
     <div class="col-md-3">
       <div class="list-group">
-        <%= link_to_unless_current 'New Entry', new_photo_path, class: 'list-group-item' %>
-        <%= link_to_unless_current 'All Photos', photos_path, class: 'list-group-item' %>
+        <%= list_group_link(new_photo_path, 'New Photo', 'fa fa-fw fa-pencil') %>
+        <%= list_group_link(photos_path, 'All Photos', 'fa fa-fw fa-list') %>
       </div>
-
     </div>
     <div class="col-md-9"><%= yield %></div>
   </div>
-
 </div>
 </body>
 </html>
