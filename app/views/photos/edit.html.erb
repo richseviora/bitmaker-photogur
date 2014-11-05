@@ -1,11 +1,2 @@
-<h1>Photos</h1>
-<%= form_for @photo do |f| %>
-    <%= label @photo, :title %>
-    <%= f.text_field :title %>
-    <%= label @photo, :author %>
-    <%= f.text_field :author %>
-    <%= label @photo, :url %>
-    <%= f.text_field :url %>
-    <%= f.submit %>
-
-<% end %>
+<h2>Photos</h2>
+<%= render'photos_form' %>

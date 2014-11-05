@@ -1,7 +1,9 @@
-<h1>Photos</h1>
-<%= link_to 'New Entry', new_photo_path %>
+<h2>Photos</h2>
+
 <% @photo.each do |photo| %>
-<%= link_to image_tag(photo.url), photo_path(photo) %>
-<%= photo.title %>
-    <%= photo.author %>
+    <div class="col-md-3">
+      <%= link_to image_tag(photo.url, class: 'img-responsive'), photo_path(photo) %>
+      <%= content_tag :div, photo.title, class: 'photo_title' %>
+      <%= content_tag :div, photo.author, class: 'photo_author' %>
+    </div>
 <% end %>
