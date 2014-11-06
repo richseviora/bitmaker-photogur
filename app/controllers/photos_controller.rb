@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @photo = Photo.all
+    @photo = Photo.newest_first
   end
 
   def create
