@@ -1,4 +1,7 @@
 <%= link_to path, class: "list-group-item" do %>
     <span class="<%= classes %>"></span>
     <%= content_tag :span, text %>
+    <% if !badge.nil? %>
+        <%= content_tag :span, badge, class: 'badge' %>
+    <% end %>
 <% end %>

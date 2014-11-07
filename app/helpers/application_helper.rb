@@ -10,4 +10,9 @@ module ApplicationHelper
         'alert alert-success'
     end
   end
+
+  def badge_text
+    #to_s required as the values will not convert automatically.
+    Photo.count.to_s + '/' + Photo.created_before(1.month.ago).count.to_s
+  end
 end

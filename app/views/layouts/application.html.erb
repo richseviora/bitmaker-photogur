@@ -21,8 +21,8 @@
   <div class="row">
     <div class="col-md-3">
       <div class="list-group">
-        <%= list_group_link(new_photo_path, 'New Photo', 'fa fa-fw fa-pencil') %>
-        <%= list_group_link(photos_path, 'All Photos', 'fa fa-fw fa-list') %>
+        <%= list_group_link(new_photo_path, 'New Photo', 'fa fa-fw fa-pencil',nil) %>
+        <%= list_group_link(photos_path, 'All Photos', 'fa fa-fw fa-list', badge_text) %>
       </div>
     </div>
     <div class="col-md-9"><%= yield %></div>

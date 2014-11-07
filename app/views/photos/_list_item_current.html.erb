@@ -1,4 +1,7 @@
 <div class="list-group-item disabled">
   <span class="<%= classes %>"></span>
   <%= content_tag :span, text %>
+  <% if !badge.nil? %>
+      <%= content_tag :span, badge, class: 'badge' %>
+  <% end %>
 </div>
